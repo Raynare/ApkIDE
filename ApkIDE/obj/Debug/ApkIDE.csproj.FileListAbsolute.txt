@@ -1,0 +1,9 @@
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\bin\Debug\ApkIDE.exe.config
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.csprojResolveAssemblyReference.cache
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.MainWindow.resources
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.Properties.Resources.resources
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.csproj.GenerateResource.Cache
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\bin\Debug\ApkIDE.exe
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\bin\Debug\ApkIDE.pdb
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.exe
+c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.pdb
