@@ -7,3 +7,12 @@ c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\bin\Deb
 c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\bin\Debug\ApkIDE.pdb
 c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.exe
 c:\users\zhur.sergey\documents\visual studio 2015\Projects\ApkIDE\ApkIDE\obj\Debug\ApkIDE.pdb
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\bin\Debug\ApkIDE.exe.config
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\obj\Debug\ApkIDE.exe
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\obj\Debug\ApkIDE.pdb
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\bin\Debug\ApkIDE.exe
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\bin\Debug\ApkIDE.pdb
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\obj\Debug\ApkIDE.csprojResolveAssemblyReference.cache
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\obj\Debug\ApkIDE.MainWindow.resources
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\obj\Debug\ApkIDE.Properties.Resources.resources
+C:\Users\ertev\Desktop\ApkIDE\ApkIDE\obj\Debug\ApkIDE.csproj.GenerateResource.Cache

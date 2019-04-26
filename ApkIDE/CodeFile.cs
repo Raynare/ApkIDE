@@ -3,23 +3,23 @@ using System.IO;
 
 public class CodeFile
 {
-	public CodeFile(String path)
+	public CodeFile(string path)
 	{
         codeLines = File.ReadAllLines(path);
         /* Such delimeter won't work on MacOS */
         name = path.Substring(path.LastIndexOf("\\") + 1);
 	}
 
-    public String[] GetCodeLines()
+    public string[] GetCodeLines()
     {
         return codeLines;
     }
 
-    public String GetFileName()
+    public string GetFileName()
     {
         return name;
     }
 
-    private String name;
-    private String[] codeLines;
+    private string name;
+    private string[] codeLines;
 }
