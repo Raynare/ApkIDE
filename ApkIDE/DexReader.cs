@@ -24,19 +24,24 @@ class DexReader
         headerSize = CalcValue(bytes, Globals.COMMON_DEX_HEADER_SIZE, Globals.HEADER_SIZE_OFFSET);
         endianTag = CalcValue(bytes, Globals.COMMON_DEX_HEADER_SIZE, Globals.ENDIAN_TAG_OFFSET);
 
-        links = GetDataBlock(bytes, Globals.LINK_SIZE_OFFSET, Globals.LINK_OFFSET);
-        stringIds = GetDataBlock(bytes, Globals.STRING_ID_SIZE_OFFSET, Globals.STRING_ID_OFFSET);
-        typeIds = GetDataBlock(bytes, Globals.TYPE_ID_SIZE_OFFSET, Globals.TYPE_ID_OFFSET);
-        protoIds = GetDataBlock(bytes, Globals.PROTO_ID_SIZE_OFFSET, Globals.PROTO_ID_OFFSET);
-        fieldIds = GetDataBlock(bytes, Globals.FIELD_ID_SIZE_OFFSET, Globals.FIELD_ID_OFFSET);
-        methodIds = GetDataBlock(bytes, Globals.METHOD_ID_SIZE_OFFSET, Globals.METHOD_ID_OFFSET);
-        classDefs = GetDataBlock(bytes, Globals.CLASS_DEFS_SIZE_OFFSET, Globals.CLASS_DEFS_OFFSET);
-        data = GetDataBlock(bytes, Globals.DATA_SIZE_OFFSET, Globals.DATA_OFFSET);
+        links = GetDataBlock(bytes, Globals.LINK_SIZE_OFFSET, Globals.LINK_OFFSET, 1); // block size is currently unknown!
+        stringIds = GetDataBlock(bytes, Globals.STRING_ID_SIZE_OFFSET, Globals.STRING_ID_OFFSET, Globals.STRING_ID_BLOCK_SIZE);
+        typeIds = GetDataBlock(bytes, Globals.TYPE_ID_SIZE_OFFSET, Globals.TYPE_ID_OFFSET, Globals.TYPE_ID_BLOCK_SIZE);
+        protoIds = GetDataBlock(bytes, Globals.PROTO_ID_SIZE_OFFSET, Globals.PROTO_ID_OFFSET, Globals.PROTO_ID_BLOCK_SIZE);
+        fieldIds = GetDataBlock(bytes, Globals.FIELD_ID_SIZE_OFFSET, Globals.FIELD_ID_OFFSET, Globals.FIELD_ID_BLOCK_SIZE);
+        methodIds = GetDataBlock(bytes, Globals.METHOD_ID_SIZE_OFFSET, Globals.METHOD_ID_OFFSET, Globals.METHOD_ID_BLOCK_SIZE);
+        classDefs = GetDataBlock(bytes, Globals.CLASS_DEFS_SIZE_OFFSET, Globals.CLASS_DEFS_OFFSET, Globals.CLASS_DEFS_BLOCK_SIZE);
+        data = GetDataBlock(bytes, Globals.DATA_SIZE_OFFSET, Globals.DATA_OFFSET, Globals.DATA_BLOCK_SIZE);
     }
 
     public byte[] GetData()
     {
         return data;
+    }
+
+    public byte[] GetStringIds()
+    {
+        return stringIds;
     }
 
     private uint CalcHexValue(byte decValue, long pos)
@@ -64,11 +69,11 @@ class DexReader
         return signatureBytes;
     }
 
-    private byte[] GetDataBlock(byte[] bytes, uint sizeOffset, uint offset)
+    private byte[] GetDataBlock(byte[] bytes, uint sizeOffset, uint offset, short elementSize)
     {
         uint blockSize = CalcValue(bytes, Globals.COMMON_DEX_HEADER_SIZE, sizeOffset);
         uint blockOffset = CalcValue(bytes, Globals.COMMON_DEX_HEADER_SIZE, offset);
-        return GetBytesSubarray(bytes, blockSize, blockOffset);
+        return GetBytesSubarray(bytes, (uint)(blockSize * elementSize), blockOffset);
     }
 
     private uint checksum;

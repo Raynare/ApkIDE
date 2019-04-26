@@ -104,7 +104,7 @@ namespace ApkIDE
             DialogResult result = openFileDialog.ShowDialog();
 
             DexReader dexReader = new DexReader(openFileDialog.FileName);
-            codeTxt.Text = Encoding.UTF8.GetString(dexReader.GetData());
+            codeTxt.Text = Encoding.ASCII.GetString(dexReader.GetStringIds());
         }
 
         private void javaCodeToolStripMenuItem_Click(object sender, EventArgs e)

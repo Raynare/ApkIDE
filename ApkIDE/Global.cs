@@ -11,21 +11,36 @@
     public static uint FILE_SIZE_OFFSET        = 32;
     public static uint HEADER_SIZE_OFFSET      = 36;
     public static uint ENDIAN_TAG_OFFSET       = 40;
+
     public static uint LINK_SIZE_OFFSET        = 44;
     public static uint LINK_OFFSET             = 48;
     public static uint MAP_OFFSET              = 52; // not parsed
+
     public static uint STRING_ID_SIZE_OFFSET   = 56;
     public static uint STRING_ID_OFFSET        = 60;
+    public static short STRING_ID_BLOCK_SIZE   = 4;
+
     public static uint TYPE_ID_SIZE_OFFSET     = 64;
     public static uint TYPE_ID_OFFSET          = 68;
+    public static short TYPE_ID_BLOCK_SIZE     = 4;
+
     public static uint PROTO_ID_SIZE_OFFSET    = 72;
     public static uint PROTO_ID_OFFSET         = 76;
+    public static short PROTO_ID_BLOCK_SIZE    = 12;
+
     public static uint FIELD_ID_SIZE_OFFSET    = 80;
     public static uint FIELD_ID_OFFSET         = 84;
+    public static short FIELD_ID_BLOCK_SIZE    = 8;
+
     public static uint METHOD_ID_SIZE_OFFSET   = 88;
     public static uint METHOD_ID_OFFSET        = 92;
+    public static short METHOD_ID_BLOCK_SIZE   = 8;
+
     public static uint CLASS_DEFS_SIZE_OFFSET  = 96;
     public static uint CLASS_DEFS_OFFSET       = 100;
+    public static short CLASS_DEFS_BLOCK_SIZE  = 32;
+
     public static uint DATA_SIZE_OFFSET        = 104;
     public static uint DATA_OFFSET             = 108;
+    public static short DATA_BLOCK_SIZE        = 1;
 }
